@@ -1,0 +1,12 @@
+
+temp += "def descifrado(self, textocifrado):\n"
+temp += "    assert tam_bit(textocifrado) <= 64\n"
+temp += "    texto_izq = textocifrado >> 32\n"
+temp += "    texto_der = textocifrado & 0xFFFFFFFF\n"
+temp += "    for i in range(8):\n"
+temp += "           texto_izq, texto_der = ronda_descrifrado(\n"
+temp +="            texto_izq, texto_der, self.master_key[i])\n"
+temp +="     for i in range(24):\n"
+temp +="            texto_izq, texto_der = ronda_descrifrado(\n"
+temp +="                texto_izq, texto_der, self.master_key[(7 - i) % 8])2\n"
+temp +="     return (texto_izq << 32) | texto_der\n"

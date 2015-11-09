@@ -66,10 +66,10 @@ class GOST:
 
         return (texto_izq << 32) | texto_der
 
-    def descifrado(self, ciphertext):
-        assert tam_bit(ciphertext) <= 64
-        texto_izq = ciphertext >> 32
-        texto_der = ciphertext & 0xFFFFFFFF
+    def descifrado(self, textocifrado):
+        assert tam_bit(textocifrado) <= 64
+        texto_izq = textocifrado >> 32
+        texto_der = textocifrado & 0xFFFFFFFF
 
         for i in range(8):
             texto_izq, texto_der = ronda_descrifrado(
