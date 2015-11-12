@@ -93,10 +93,8 @@ with open("gost.py", "rb") as input:
 tam = str(size) 
 
 if __name__ == '__main__':
-#    text = 0xfedcba0987654321
     text = int(tam.ljust(23-len(tam),'0'))
     key = random.getrandbits(256)
-#    key = 0x1111222233334444555566667777888899990000aaaabbbbccccddddeeeeffff
     my_GOST = GOST()
     my_GOST.set_key(key)
 
