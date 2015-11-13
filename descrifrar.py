@@ -30,4 +30,4 @@ llave = my_GOST.set_key(key)
 for i in range(num):
     cifr = my_GOST.cifrado(cif)
 
-p = desc + llave + cifr
+programa = desc + llave + cifr
